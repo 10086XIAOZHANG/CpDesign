@@ -15,9 +15,9 @@ export interface FooterProps {
   onClearCompleted: () => any;
 }
 
-export interface FooterState {
-  /* empty */
-}
+// export interface FooterState {
+//   /* empty */
+// }
 
 export class Footer extends React.Component<FooterProps, {}> {
   renderTodoCount() {
