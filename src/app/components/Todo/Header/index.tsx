@@ -6,11 +6,11 @@ export interface HeaderProps {
   addTodo: (todo: Partial<TodoModel>) => any;
 }
 
-export interface HeaderState {
-  /* empty */
-}
+// export interface HeaderState {
+//   /* empty */
+// }
 
-export class Header extends React.Component<HeaderProps, HeaderState> {
+export class Header extends React.Component<HeaderProps, {}> {
   private handleSave = (text: string) => {
     if (text.length) {
       this.props.addTodo({ text });

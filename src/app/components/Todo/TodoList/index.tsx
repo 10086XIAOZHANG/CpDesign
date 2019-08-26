@@ -8,9 +8,7 @@ export interface TodoListProps extends TodoActions {
   completeAll: () => any;
 }
 
-export interface TodoListState {}
-
-export class TodoList extends React.Component<TodoListProps, TodoListState> {
+export class TodoList extends React.Component<TodoListProps, {}> {
   constructor(props?: TodoListProps, context?: any) {
     super(props, context);
   }

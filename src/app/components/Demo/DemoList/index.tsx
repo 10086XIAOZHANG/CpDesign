@@ -6,23 +6,25 @@ export interface DemoListProps {
   demosList: DemoModel[];
 }
 
-export interface DemoListState {}
-
-export class DemoList extends React.Component<DemoListProps, DemoListState> {
-  public lv: any;
+export class DemoList extends React.Component<DemoListProps, {}> {
+  protected lv: any;
   constructor(props?: DemoListProps, context?: any) {
     super(props, context);
-    this.lv = null;
+    this.lv = React.createRef();
   }
 
   render() {
     const { demosList } = this.props;
-    const renderRow = (rowData: Object, sectionID: string, rowID: string) => {
+    const renderRow = (
+      rowData: Record<string, any>,
+      sectionID: string,
+      rowID: string
+    ) => {
       return <div>4324</div>;
     };
     return (
       <ListView
-        ref={(el) => (this.lv = el)}
+        ref={this.lv}
         dataSource={new ListView.DataSource({
           rowHasChanged: (row1, row2) => row1 !== row2
         }).cloneWithRows(demosList || [])}

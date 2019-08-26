@@ -13,11 +13,11 @@ import {
   DemoFilter
 } from 'app/constants';
 
-export interface DemoAppProps extends RouteComponentProps<any> {
-  /** MobX Stores will be injected via @inject() **/
-  // [STORE_ROUTER]: RouterStore;
-  // [STOURE_TODO]: DemoStore;
-}
+// export interface DemoAppProps extends RouteComponentProps<any> {
+//   /** MobX Stores will be injected via @inject() **/
+//   // [STORE_ROUTER]: RouterStore;
+//   // [STOURE_TODO]: DemoStore;
+// }
 
 export interface DemoAppState {
   filter: DemoFilter;
@@ -25,8 +25,8 @@ export interface DemoAppState {
 
 @inject(STORE_DEMO, STORE_ROUTER)
 @observer
-export class DemoApp extends React.Component<DemoAppProps, DemoAppState> {
-  constructor(props: DemoAppProps, context: any) {
+export class DemoApp extends React.Component<{}, DemoAppState> {
+  constructor(props: {}, context: any) {
     super(props, context);
     this.state = { filter: DemoFilter.ALL };
   }

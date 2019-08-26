@@ -4,7 +4,7 @@ export class DemoModel {
   readonly id: number;
   @observable public text: string;
   @observable public filter: boolean;
-  constructor(text: string, filter: boolean = false) {
+  constructor(text: string, filter = false) {
     this.id = DemoModel.generateId();
     this.text = text;
     this.filter = filter;

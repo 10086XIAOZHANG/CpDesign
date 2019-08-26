@@ -5,7 +5,7 @@ export class TodoModel {
   @observable public text: string;
   @observable public completed: boolean;
 
-  constructor(text: string, completed: boolean = false) {
+  constructor(text: string, completed = false) {
     this.id = TodoModel.generateId();
     this.text = text;
     this.completed = completed;

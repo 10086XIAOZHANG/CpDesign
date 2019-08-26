@@ -15,11 +15,11 @@ export interface FooterProps {
   onClearCompleted: () => any;
 }
 
-export interface FooterState {
-  /* empty */
-}
+// export interface FooterState {
+//   /* empty */
+// }
 
-export class Footer extends React.Component<FooterProps, FooterState> {
+export class Footer extends React.Component<FooterProps, {}> {
   renderTodoCount() {
     const { activeCount } = this.props;
     const itemWord = activeCount === 1 ? 'item' : 'items';
