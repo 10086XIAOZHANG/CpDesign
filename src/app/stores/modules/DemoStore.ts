@@ -1,4 +1,5 @@
 import { observable, computed, action } from 'mobx';
+import { getDemoList } from 'app/services';
 import { DemoModel } from 'app/models';
 
 export class DemoStore {
@@ -19,10 +20,15 @@ export class DemoStore {
   }
 
   @action
+  updateDocument = async () => {
+    const demoList = await getDemoList(1);
+    console.log(demoList);
+  };
+
+  @action
   addTodo = (item: Partial<DemoModel>): void => {
     this.demosList.push(new DemoModel(item.text, item.filter));
   };
-
   @action
   editTodo = (id: number, data: Partial<DemoModel>): void => {
     this.demosList = this.demosList.map((item) => {

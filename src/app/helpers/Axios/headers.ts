@@ -1,45 +1,48 @@
-import { isPlainObject } from './util'
+import { isPlainObject } from './util';
 
 function normalizeHeaderName(headers: any, normalizedName: string): void {
   if (!headers) {
-    return
+    return;
   }
-  Object.keys(headers).forEach(name => {
-    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
-      headers[normalizedName] = headers[name]
-      delete headers[name]
+  Object.keys(headers).forEach((name) => {
+    if (
+      name !== normalizedName &&
+      name.toUpperCase() === normalizedName.toUpperCase()
+    ) {
+      headers[normalizedName] = headers[name];
+      delete headers[name];
     }
-  })
+  });
 }
 
 export function processHeaders(headers: any, data: any): any {
-  normalizeHeaderName(headers, 'Content-Type')
+  normalizeHeaderName(headers, 'Content-Type');
 
   if (isPlainObject(data)) {
     if (headers && !headers['Content-Type']) {
-      headers['Content-Type'] = 'application/json;charset=utf-8'
+      headers['Content-Type'] = 'application/json;charset=utf-8';
     }
   }
-  return headers
+  return headers;
 }
 
 export function parseHeaders(headers: string): any {
-  let parsed = Object.create(null)
+  const parsed = Object.create(null);
   if (!headers) {
-    return parsed
+    return parsed;
   }
 
-  headers.split('\r\n').forEach(line => {
-    let [key, val] = line.split(':')
-    key = key.trim().toLowerCase()
+  headers.split('\r\n').forEach((line) => {
+    let [key, val] = line.split(':');
+    key = key.trim().toLowerCase();
     if (!key) {
-      return
+      return;
     }
     if (val) {
-      val = val.trim()
+      val = val.trim();
     }
-    parsed[key] = val
-  })
+    parsed[key] = val;
+  });
 
-  return parsed
+  return parsed;
 }
