@@ -16,7 +16,7 @@ export interface FooterProps {
 }
 
 // export interface FooterState {
-//   /* empty */
+//   /* empty noting */
 // }
 
 export class Footer extends React.Component<FooterProps, {}> {
