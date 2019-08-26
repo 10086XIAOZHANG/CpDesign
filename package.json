@@ -13,11 +13,6 @@
     "lint": "eslint src --fix --ext .ts,.tsx "
 
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && git add --all"
-    }
-  },
   "lint-staged": {
     "*.{.ts,.tsx}": [
       "eslint",
@@ -80,5 +75,10 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
