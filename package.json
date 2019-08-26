@@ -9,12 +9,8 @@
     "start": "webpack-dev-server --mode development --hot --progress --colors --port 8088 --open",
     "build": "webpack -p --progress --colors",
     "prettier": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-    "lint": "eslint src --fix --ext .ts,.tsx "
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "lint": "eslint src --fix --ext .ts,.tsx ",
+    "precommit": "npm run lint"
   },
   "lint-staged": {
     "*.{.ts,.tsx}": [
