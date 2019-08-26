@@ -13,6 +13,11 @@
     "lint": "eslint src --fix --ext .ts,.tsx "
 
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && git add --all"
+    }
+  },
   "lint-staged": {
     "*.{.ts,.tsx}": [
       "eslint",
