@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as style from './style.less';
 import { inject, observer } from 'mobx-react';
-import { RouteComponentProps } from 'react-router';
+// import { RouteComponentProps } from 'react-router';
 // import { Header } from 'app/components/Todo/Header';
 // import { Footer } from 'app/components/Todo/Footer';
 import { DemoList } from 'app/components/Demo';
@@ -35,7 +35,7 @@ export class DemoApp extends React.Component<{}, DemoAppState> {
     this.checkLocationChange();
   }
 
-  componentWillReceiveProps(nextProps: DemoAppProps, nextContext: any) {
+  componentWillReceiveProps(nextProps: any, nextContext: any) {
     this.checkLocationChange();
   }
 

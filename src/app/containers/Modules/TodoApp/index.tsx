@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as style from './style.less';
 import { inject, observer } from 'mobx-react';
-import { RouteComponentProps } from 'react-router';
+// import { RouteComponentProps } from 'react-router';
 import { Header } from 'app/components/Todo/Header';
 import { TodoList } from 'app/components/Todo/TodoList';
 import { Footer } from 'app/components/Todo/Footer';
@@ -35,7 +35,7 @@ export class TodoApp extends React.Component<{}, TodoAppState> {
     this.checkLocationChange();
   }
 
-  componentWillReceiveProps(nextProps: TodoAppProps, nextContext: any) {
+  componentWillReceiveProps(nextProps: any, nextContext: any) {
     this.checkLocationChange();
   }
 

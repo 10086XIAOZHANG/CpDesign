@@ -37,12 +37,23 @@ module.exports = {
       // .ts, .tsx
       {
         test: /\.tsx?$/,
+        exclude: /node_modules/,
         use: [
           !isProduction && {
             loader: 'babel-loader',
             options: { plugins: ['react-hot-loader/babel'] }
           },
-          'ts-loader'
+          'ts-loader',
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: false,
+              extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx'],
+              cache: false,
+              emitWarning: true,
+              emitError: false
+            }
+          }
         ].filter(Boolean)
       },
       // css
