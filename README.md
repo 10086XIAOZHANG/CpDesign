@@ -24,6 +24,12 @@ $ npm run build
 $ npm run prettier
 ```
 
+## Code lint
+
+```
+$ npm run lint
+```
+
 # License
 
 MIT
