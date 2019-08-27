@@ -7,6 +7,7 @@ export const App = hot(({ history }) => (
   <Root>
     <BrowserRouter history={history}>
       <Route path="/demo" component={TodoApp} />
+      <Route path="/cc" component={TodoApp} />
       <Route component={DemoApp} />
     </BrowserRouter>
   </Root>
