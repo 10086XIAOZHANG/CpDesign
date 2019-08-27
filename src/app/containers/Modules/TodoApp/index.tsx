@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as style from './style.less';
 import { inject, observer } from 'mobx-react';
-// import { RouteComponentProps } from 'react-router';
+import { RouteComponentProps } from 'react-router';
 import { Header } from 'app/components/Todo/Header';
 import { TodoList } from 'app/components/Todo/TodoList';
 import { Footer } from 'app/components/Todo/Footer';
@@ -13,11 +13,11 @@ import {
   TodoFilter
 } from 'app/constants';
 
-// export interface TodoAppProps extends RouteComponentProps<any> {
-//   /** MobX Stores will be injected via @inject() **/
-//   // [STORE_ROUTER]: RouterStore;
-//   // [STOURE_TODO]: TodoStore;
-// }
+export interface TodoAppProps extends RouteComponentProps<any> {
+  /** MobX Stores will be injected via @inject() **/
+  // [STORE_ROUTER]: RouterStore;
+  // [STOURE_TODO]: TodoStore;
+}
 
 export interface TodoAppState {
   filter: TodoFilter;
@@ -25,8 +25,8 @@ export interface TodoAppState {
 
 @inject(STORE_TODO, STORE_ROUTER)
 @observer
-export class TodoApp extends React.Component<{}, TodoAppState> {
-  constructor(props: {}, context: any) {
+export class TodoApp extends React.Component<TodoAppProps, TodoAppState> {
+  constructor(props: TodoAppProps, context: any) {
     super(props, context);
     this.state = { filter: TodoFilter.ALL };
   }
@@ -35,7 +35,7 @@ export class TodoApp extends React.Component<{}, TodoAppState> {
     this.checkLocationChange();
   }
 
-  componentWillReceiveProps(nextProps: any, nextContext: any) {
+  componentWillReceiveProps(nextProps: TodoAppProps, nextContext: any) {
     this.checkLocationChange();
   }
 

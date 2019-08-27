@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
-import { Router, Route, Switch } from 'react-router';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { Root, TodoApp, DemoApp } from 'app/containers';
 // render react DOM
 export const App = hot(({ history }) => (
   <Root>
-    <Router history={history}>
-      <Switch>
-        <Route path="/demo" component={TodoApp} />
-        <Route component={DemoApp} />
-      </Switch>
-    </Router>
+    <BrowserRouter history={history}>
+      <Route path="/demo" component={TodoApp} />
+      <Route component={DemoApp} />
+    </BrowserRouter>
   </Root>
 ));

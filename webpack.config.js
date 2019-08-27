@@ -47,8 +47,8 @@ module.exports = {
           {
             loader: 'eslint-loader',
             options: {
-              fix: false,
-              extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx'],
+              fix: true,
+              extensions: ['.js', '.jsx', '.ts', '.tsx'],
               cache: false,
               emitWarning: true,
               emitError: false

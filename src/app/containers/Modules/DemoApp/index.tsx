@@ -41,7 +41,7 @@ export class DemoApp extends React.Component<DemoAppProps, DemoAppState> {
   }
 
   componentWillReceiveProps(nextProps: any, nextContext: any) {
-    // this.checkLocationChange();
+    this.checkLocationChange();
   }
 
   checkLocationChange() {
