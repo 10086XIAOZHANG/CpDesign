@@ -1,14 +1,11 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader/root';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Root, TodoApp, DemoApp } from 'app/containers';
+import { BrowserRouter } from 'react-router-dom';
+import { Root } from 'app/containers';
+import routerContent from 'app/routers';
 // render react DOM
 export const App = hot(({ history }) => (
   <Root>
-    <BrowserRouter history={history}>
-      <Route path="/demo" component={TodoApp} />
-      <Route path="/cca" component={TodoApp} />
-      <Route component={DemoApp} />
-    </BrowserRouter>
+    <BrowserRouter history={history}>{routerContent()}</BrowserRouter>
   </Root>
 ));
