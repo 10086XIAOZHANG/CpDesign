@@ -13,7 +13,7 @@ const rootStore = createStores(history, fixtures!);
 // render react DOM
 ReactDOM.render(
   <Provider {...rootStore}>
-    <App history={history} />
+    <App />
   </Provider>,
   document.getElementById('root')
 );

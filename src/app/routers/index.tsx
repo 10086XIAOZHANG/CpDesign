@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { Route } from 'react-keeper';
 import { TodoApp, DemoApp } from 'app/containers';
 export default function routerContent(): any {
   return (
     <React.Fragment>
       <Route path="/demo" component={TodoApp} />
-      <Route path="/cca" component={TodoApp} />
-      <Route component={DemoApp} />
+      <Route path="/ccca" component={TodoApp} />
+      <Route index component={DemoApp} />
     </React.Fragment>
   );
 }

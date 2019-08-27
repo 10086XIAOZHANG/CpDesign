@@ -75,8 +75,9 @@
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
     "mobx-react-router": "^4.0.5",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-keeper": "^2.1.12",
     "react-router": "^4.3.1",
     "react-router-dom": "^5.0.1"
   },

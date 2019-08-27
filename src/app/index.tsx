@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { hot } from 'react-hot-loader/root';
-import { BrowserRouter } from 'react-router-dom';
+
+import { BrowserRouter } from 'react-keeper';
 import { Root } from 'app/containers';
 import routerContent from 'app/routers';
 // render react DOM
-export const App = hot(({ history }) => (
+export const App = () => (
   <Root>
-    <BrowserRouter history={history}>{routerContent()}</BrowserRouter>
+    <BrowserRouter>{routerContent()}</BrowserRouter>
   </Root>
-));
+);
