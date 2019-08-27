@@ -5,5 +5,4 @@ node_modules
 *.log*
 build
 dist
-.idea
 package-lock.json
