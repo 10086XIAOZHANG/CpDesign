@@ -4,6 +4,20 @@
 
 通过静态类型检测可以尽早检测出程序中隐藏的的逻辑错误，对于 JavaScript 动态的弱类型语言，虽然灵活性高，但是对于初学者来说，如果不熟悉 JavaScript 内部的语言机制，很容易造成隐藏的事故。但是通过 TypeScript 的静态类型检测可以规避这些问题，因为其能够约束变量产生的类型。结合 IDE 编辑器可以推导变量对应的类型以及内部的结构，提高代码的健壮性和可维护性。
 
+## React-Hooks
+
+- - State Hook
+- - Effect Hook
+- - useContext
+- - useReducer
+- - useCallback
+- - useMemo
+- - useRef
+
+## redux-react-hook
+
+redux-react-hook 使用了 react 提供的 Context（上下文）功能，给顶层组件 Provide 传入了 store 对象，绑定到上下文
+
 ## React-Redux
 
 数据流流动不自然，只有用到的数据才会引发绑定，局部精确更新，但避免了粒度控制烦恼。
@@ -81,10 +95,10 @@ $ npm run build
 $ npm run prettier
 ```
 
-## Code lint(引入 eslint --fit 静态检查)
+## Code lint(引入 lint-staged 静态检查)
 
 ```
-$ npm run lint
+$ npm run lint-staged
 ```
 
 # License
