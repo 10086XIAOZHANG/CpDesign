@@ -1,0 +1,2 @@
+const SET_GLOBAL_MSG ="SET_GLOBAL_MSG"
+export {SET_GLOBAL_MSG}

@@ -3,10 +3,10 @@ module.exports = {
   'GET /api/users': { users: [1, 2] },
 
   // GET can be omitted
-  'GET /api/users/1': { id: 1 },
+  'GET /api/users/1': { id: 2 },
 
   // support for custom functions, APIs refer to express@4
   'POST /api/users/create': (req, res) => {
-    res.end('OK');
+    res.end('OK1');
   }
 };
