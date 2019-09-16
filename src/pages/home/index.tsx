@@ -1,11 +1,13 @@
 import * as React from 'react';
 // import { useSelector, useDispatch } from "react-redux";
 import { NavBar, Icon } from 'antd-mobile';
+
+import { Control } from 'react-keeper';
 // import { getURLQueryString } from "@/utils/common";
 import styles from './index.less';
 
 const Home: React.FC = (): React.ReactElement => {
-  const onLeftClick = () => console.log('onLeftClick');
+  const onLeftClick = () => Control.go('/pay?orderId=' + 1233);
   return (
     <div className={styles.home}>
       <NavBar
@@ -19,7 +21,7 @@ const Home: React.FC = (): React.ReactElement => {
       >
         NavBar
       </NavBar>
-      home
+      <input />
     </div>
   );
 };

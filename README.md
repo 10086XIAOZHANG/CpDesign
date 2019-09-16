@@ -14,6 +14,10 @@
 - - useMemo
 - - useRef
 
+## react-keeper(缓存页面信息)
+
+React-Keeper 是 React 生态里一款较新的开源路由库，由国内团队开发，借鉴了 React-Router 4 很多特点，不过灵活性、实用性都强于 React-Router 很多，而且兼容 React-Router 常用用法，其文档和代码可以参见https://github.com/vifird/react-keeper。
+
 ## redux-react-hook
 
 redux-react-hook 使用了 react 提供的 Context（上下文）功能，给顶层组件 Provide 传入了 store 对象，绑定到上下文

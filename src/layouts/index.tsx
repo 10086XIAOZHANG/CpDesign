@@ -3,15 +3,13 @@ import * as React from 'react';
 
 import Routes from '../routers';
 // import { useSelector } from 'react-redux';
-import { RouteComponentProps } from 'react-router';
-import { withRouter } from 'react-router-dom';
-const BasicLayout: React.FC<RouteComponentProps> = (
-  props: RouteComponentProps
-): React.ReactElement => {
+// import { RouteComponentProps } from 'react-router';
+// import { withRouter } from 'react-router-dom';
+const BasicLayout: React.FC = (props): React.ReactElement => {
   return (
     <div>
       <Routes />
     </div>
   );
 };
-export default withRouter(BasicLayout);
+export default BasicLayout;
