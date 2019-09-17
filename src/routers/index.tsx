@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { Route } from 'react-keeper';
+import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/home';
 import NotFound from '../pages/404';
 
 const Routes: React.FC = (history): React.ReactElement => {
   return (
-    <>
-      <Route cache={true} index={true} path="/" component={Home} />
-      <Route miss={true} component={NotFound} />
-    </>
+    <Switch>
+      <Route exact={true} path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
   );
 };
 

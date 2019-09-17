@@ -1,13 +1,17 @@
 import * as React from 'react';
-// import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
 import { NavBar, Icon } from 'antd-mobile';
-
-import { Control } from 'react-keeper';
+import { saveOrderId } from '@/store/action/order';
 // import { getURLQueryString } from "@/utils/common";
 import styles from './index.less';
 
-const Home: React.FC = (): React.ReactElement => {
-  const onLeftClick = () => Control.go('/pay?orderId=' + 1233);
+const Home: React.FC = () => {
+  const dispatch = useDispatch();
+  const [order, setOrder] = React.useState(1);
+  const onLeftClick = () => {
+    dispatch(saveOrderId(1233));
+    setOrder(1);
+  };
   return (
     <div className={styles.home}>
       <NavBar
@@ -19,7 +23,7 @@ const Home: React.FC = (): React.ReactElement => {
           <Icon key="1" type="ellipsis" />
         ]}
       >
-        NavBar
+        NavBar{order}
       </NavBar>
       <input />
     </div>

@@ -135,7 +135,7 @@
 
 "@types/react-dom@^16.9.0":
   version "16.9.0"
-  resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.9.0.tgz#ba6ddb00bf5de700b0eb91daa452081ffccbfdea"
+  resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.9.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact-dom%2Fdownload%2F%40types%2Freact-dom-16.9.0.tgz#ba6ddb00bf5de700b0eb91daa452081ffccbfdea"
   integrity sha1-um3bAL9d5wCw65HapFIIH/zL/eo=
   dependencies:
     "@types/react" "*"
@@ -174,6 +174,13 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/redux-persist@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.npm.taobao.org/@types/redux-persist/download/@types/redux-persist-4.3.1.tgz#aa4c876859e0bea5155e5f7980e5b8c4699dc2e6"
+  integrity sha1-qkyHaFngvqUVXl95gOW4xGmdwuY=
+  dependencies:
+    redux-persist "*"
 
 "@types/redux-thunk@^2.1.0":
   version "2.1.0"
@@ -4526,7 +4533,7 @@ interpret@^1.0.0:
   resolved "https://registry.npm.taobao.org/interpret/download/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha1-1QYaYiS+WOgIOYX1AU2EQ1lXYpY=
 
-invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -7602,7 +7609,7 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
-query-string@^4.1.0, query-string@^4.2.2:
+query-string@^4.1.0:
   version "4.3.4"
   resolved "https://registry.npm.taobao.org/query-string/download/query-string-4.3.4.tgz?cache=0&sync_timestamp=1567240671074&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-4.3.4.tgz#bbb693b9ca915c232515b228b1a02b609043dbeb"
   integrity sha1-u7aTucqRXCMlFbIosaArYJBD2+s=
@@ -7848,15 +7855,6 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.9.0:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.9.0.tgz?cache=0&sync_timestamp=1568420695668&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha1-IcqVYTmarQ/xp3AcAWg+jKmB7cs=
 
-react-keeper@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.npm.taobao.org/react-keeper/download/react-keeper-2.2.2.tgz#df7dccaac0403c2e8a8823658564c690f2056e6e"
-  integrity sha1-333MqsBAPC6KiCNlhWTGkPIFbm4=
-  dependencies:
-    create-react-class "^15.6.0"
-    prop-types "^15.5.10"
-    vhistory "^1.0.0"
-
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -8049,6 +8047,11 @@ redux-devtools-extension@^2.13.8:
   version "2.13.8"
   resolved "https://registry.npm.taobao.org/redux-devtools-extension/download/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
   integrity sha1-N7mCaIYm5eSZP/hyIMm7t80tluE=
+
+redux-persist@*, redux-persist@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/redux-persist/download/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
+  integrity sha1-tNKXL5hZWXwTDUDUsUb+zatRs6g=
 
 redux-thunk@*, redux-thunk@^2.3.0:
   version "2.3.0"
@@ -9886,16 +9889,6 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
-
-vhistory@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/vhistory/download/vhistory-1.0.1.tgz#73f189245cbdad8669dda323fb9ae2bce4f23e3d"
-  integrity sha1-c/GJJFy9rYZp3aMj+5rivOTyPj0=
-  dependencies:
-    invariant "^2.2.1"
-    loose-envify "^1.2.0"
-    query-string "^4.2.2"
-    warning "^3.0.0"
 
 vm-browserify@^1.0.1:
   version "1.1.0"
