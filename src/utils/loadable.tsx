@@ -4,9 +4,10 @@ const loadingComponent = () => {
   return null;
 };
 
-export default (loader: any, loading = loadingComponent) => {
+export default (pathName: string, loading = loadingComponent) => {
   return Loadable({
-    loader,
+    loader: () =>
+      import(/* webpackChunkName: "[request]" */ `../pages/${pathName}`),
     loading
   });
 };
