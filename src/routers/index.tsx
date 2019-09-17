@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import routers from './routes';
+import routers from '@/config/routerConfig';
 import NotFound from '@/pages/404';
 // import Loadable from 'react-loadable';
 // import Loadable from '@/utils/loadable';
