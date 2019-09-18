@@ -11,6 +11,7 @@ const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const theme = require('../package.json').theme;
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const resolve = (dir) => path.resolve(__dirname, dir);
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -68,6 +69,10 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: (info) =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
+  },
+
+  externals: {
+    jquery: 'jQuery'
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -218,7 +223,11 @@ module.exports = {
                 }
               },
               {
-                loader: require.resolve('less-loader') // compiles Less to CSS
+                loader: 'less-loader', // compiles Less to CSS
+                options: {
+                  modifyVars: theme,
+                  javascriptEnabled: true
+                }
               }
             ]
           },

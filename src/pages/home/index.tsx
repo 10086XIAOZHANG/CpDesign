@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useDispatch } from 'react-redux';
-import { NavBar, Icon } from 'antd-mobile';
+import { NavBar, Icon, Button } from 'antd-mobile';
 import { saveOrderId } from '@/store/action/order';
 // import { getURLQueryString } from "@/utils/common";
-import styles from './index.less';
+import styles from './styles/index.less';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ const Home: React.FC = () => {
         NavBar{order}
       </NavBar>
       <input />
+      <Button type="primary">Default</Button>
     </div>
   );
 };
