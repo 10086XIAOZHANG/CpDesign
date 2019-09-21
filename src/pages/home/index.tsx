@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   const dispatch = useDispatch();
   const [order, setOrder] = React.useState(1);
   const onLeftClick = () => {
-    dispatch(saveOrderId(1233));
+    dispatch(saveOrderId(process.env.CP_DESIGN_ENV));
     setOrder(1);
   };
   return (

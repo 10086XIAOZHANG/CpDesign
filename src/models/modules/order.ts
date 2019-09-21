@@ -1,4 +1,3 @@
-interface OrderState {
+export interface OrderState {
   orderId: string;
 }
-export { OrderState };

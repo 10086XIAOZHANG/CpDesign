@@ -12,7 +12,7 @@ const persistConfig = {
   stateReconciler: autoMergeLevel2 // 查看 'Merge Process' 部分的具体情况
 };
 
-const reducersCells = combineReducers(reducers);
+const reducersCells = combineReducers(reducers) as any;
 
 export const rootReducer = persistReducer(persistConfig, reducersCells);
 
