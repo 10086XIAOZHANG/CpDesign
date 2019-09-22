@@ -7,7 +7,8 @@ const Loading = ({ pastDelay }: any) => {
 
 export default (pathName: string, loading = Loading) => {
   return Loadable({
-    loader: () => import(`../pages/${pathName}`),
-    loading
+    loader: () =>
+      import(/* webpackChunkName: "[request]" */ `../pages/${pathName}/index`),
+      loading
   });
 };
