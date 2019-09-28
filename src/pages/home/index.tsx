@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { NavBar, Icon, Button } from 'antd-mobile';
 import { saveOrderId } from '@/store/action/order';
 // import { getURLQueryString } from "@/utils/common";
+import { useFormatMessage } from '@/core/Intl';
 import styles from './styles/index.less';
 
 const Home: React.FC = () => {
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
     dispatch(saveOrderId(process.env.CP_DESIGN_ENV));
     setOrder(1);
   };
+  const t = useFormatMessage();
   return (
     <div className={styles.home}>
       <NavBar
@@ -26,7 +28,7 @@ const Home: React.FC = () => {
         NavBar{order}
       </NavBar>
       <input />
-      <Button type="primary">Default</Button>
+      <Button type="primary">  { t('page.browser.title') }</Button>
     </div>
   );
 };
