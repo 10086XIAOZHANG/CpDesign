@@ -1,5 +1,6 @@
 ## 项目目录
 
+```
 |-- CPDESIGN
 |-- README.md
 |-- package.json
@@ -137,6 +138,7 @@
 |-- date.js
 |-- object.js
 |-- string.js
+```
 
 ## TypeScript
 
