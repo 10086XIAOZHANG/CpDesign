@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { SAVE_ORDER } from '@/containers/actionTypes';
+import { SAVE_ORDER } from '@/constants/actionTypes';
 export const saveOrderId = (params: any) => async (dispatch: Dispatch) => {
   try {
     dispatch({

@@ -1,4 +1,4 @@
-import { SAVE_ORDER } from '@/containers/actionTypes';
+import { SAVE_ORDER } from '@/constants/actionTypes';
 
 import { OrderState } from '@/models';
 

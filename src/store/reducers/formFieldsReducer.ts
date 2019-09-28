@@ -1,4 +1,4 @@
-import { FORM_FIELDS_LOADING_ACTION} from "@/containers/actionTypes";
+import { FORM_FIELDS_LOADING_ACTION} from "@/constants/actionTypes";
 
 import { FormFieldsState } from "@/models";
 

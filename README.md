@@ -249,6 +249,8 @@ $ npm run lint-staged
 
 ## React-Intl 多语言支持
 
+在 TypeScript 中使用 react-intl
+
 # License
 
 MIT

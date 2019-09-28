@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 // import axios from "axios";
-import { SET_GLOBAL_MSG } from '@/containers/actionTypes';
+import { SET_GLOBAL_MSG } from '@/constants/actionTypes';
 // import {environment} from '@/utils/global';
 /**
  * 控制全局消息展示状态
