@@ -1,3 +1,143 @@
+## 项目目录
+
+|-- CPDESIGN
+|-- README.md
+|-- package.json
+|-- tsconfig.json
+|-- yarn.lock
+|-- config
+| |-- env.js
+| |-- modules.js
+| |-- paths.js
+| |-- pnpTs.js
+| |-- webpack.config.js
+| |-- webpackDevServer.config.js
+| |-- jest
+| |-- cssTransform.js
+| |-- fileTransform.js
+|-- mock ——配置 mock 数据
+| |-- demo.js
+| |-- users.js
+|-- public
+| |-- favicon.ico
+| |-- index.html
+| |-- logo192.png
+| |-- logo512.png
+| |-- manifest.json
+| |-- robots.txt
+|-- scripts
+| |-- build.js
+| |-- start.js
+| |-- test.js
+|-- src
+|-- app.tsx
+|-- global.less
+|-- index.html
+|-- index.tsx
+|-- react-app-env.d.ts
+|-- serviceWorker.ts
+|-- assets
+| |-- css
+| |-- images
+|-- components
+| |-- basics
+| |-- NavLink
+| | |-- index.tsx
+| |-- Router
+| | |-- index.tsx
+| |-- WithRouter
+| |-- index.tsx
+|-- config
+| |-- routerConfig.ts
+|-- container
+|-- containers
+| |-- actionTypes
+| | |-- index.ts
+| | |-- modules
+| | |-- form.ts
+| | |-- global.ts
+| | |-- order.ts
+| |-- enums
+| |-- global.ts
+|-- core ————核心功能库
+| |-- index.ts
+| |-- Axios ————内置重写 Axios 库
+| | |-- Axios.ts
+| | |-- InterceptorManager.ts
+| | |-- dispatchRequest.ts
+| | |-- index.ts
+| | |-- xhr.ts
+| |-- Intl ————react-hooks 多语言
+| |-- InjectIntlContext.tsx
+| |-- IntlContext.ts
+| |-- hooks.ts
+| |-- index.ts
+|-- helpers ————核心库助手
+| |-- Axios
+| |-- data.ts
+| |-- error.ts
+| |-- headers.ts
+| |-- url.ts
+| |-- util.ts
+|-- languageProvider ——配置 项目多语言结构 数据
+| |-- index.js
+| |-- entries
+| | |-- enCN.js
+| | |-- enHK.js
+| |-- locales
+| |-- enCN.js
+| |-- enHK.js
+| |-- cn ————简体中文
+| | |-- common
+| | |-- browser.js
+| |-- hk ————繁体
+| |-- common
+| |-- browser.js
+|-- layouts ————路由
+| |-- index.less
+| |-- index.tsx
+|-- models ————定义数据格式
+| |-- index.ts
+| |-- modules
+| |-- form.ts
+| |-- order.ts
+|-- pages ————页面
+| |-- 404.tsx
+| |-- home
+| |-- index.tsx
+| |-- styles
+| |-- index.less
+|-- routers ————路由控制器
+| |-- index.tsx
+|-- services ————网络层服务
+| |-- index.ts
+| |-- modules
+| |-- demo.ts
+|-- store ————redux 数据服务层
+| |-- index.ts
+| |-- action
+| | |-- global.ts
+| | |-- home.ts
+| | |-- order.ts
+| |-- reducers
+| |-- formFieldsReducer.ts
+| |-- index.ts
+| |-- order.ts
+|-- types ————type 类型定义
+| |-- axios.ts
+| |-- index.ts
+|-- utils ————基础工具库
+|-- common.tsx
+|-- global.ts
+|-- loadable.tsx
+|-- object.js
+|-- data
+|-- array.js
+|-- data.js
+|-- date.js
+|-- object.js
+|-- string.js
+
 ## TypeScript
 
 类型系统能够强化规范编程，TypeScript 提供定义接口。在开发大型复杂的应用软件时十分重要，一个系统模块可以抽象的看做一个 TypeScript 定义的接口。让设计脱离实现，最终体现出一种 IDL（接口定义语言，Interface Define Language），让程序设计回归本质。
@@ -104,6 +244,8 @@ $ npm run prettier
 ```
 $ npm run lint-staged
 ```
+
+## React-Intl 多语言支持
 
 # License
 
