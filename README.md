@@ -40,7 +40,7 @@
 |-- assets
 | |-- css
 | |-- images
-|-- components
+|-- components  ————木偶组件库
 | |-- basics
 | |-- NavLink
 | | |-- index.tsx
@@ -49,9 +49,9 @@
 | |-- WithRouter
 | |-- index.tsx
 |-- config
-| |-- routerConfig.ts
-|-- container
-|-- containers
+| |-- routerConfig.ts ————路由配置文件
+|-- container ————智能组件库
+|-- constants ————常量定义
 | |-- actionTypes
 | | |-- index.ts
 | | |-- modules
