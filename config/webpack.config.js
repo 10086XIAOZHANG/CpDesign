@@ -52,6 +52,7 @@ const sassRegex = /\.(scss|sass)$/;
 const lessRegex = /\.less$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 const lessModuleRegex = /\.module\.less$/;
+const srcModuleRegex=/src/;
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
@@ -469,9 +470,10 @@ module.exports = function(webpackEnv) {
               // See https://github.com/webpack/webpack/issues/6571
               sideEffects: true,
             },
+           
             {
               test: lessRegex,
-              // exclude: lessModuleRegex,
+              exclude: srcModuleRegex,
               use: getStyleLoaders(
                 {
                   importLoaders: 2,
@@ -482,6 +484,23 @@ module.exports = function(webpackEnv) {
                   modifyVars: theme,
                   javascriptEnabled: true
                 }
+              ),
+              // Don't consider CSS imports dead code even if the
+              // containing package claims to have no side effects.
+              // Remove this when webpack adds a warning or an error for this.
+              // See https://github.com/webpack/webpack/issues/6571
+              sideEffects: true,
+            },
+            {
+              test: lessRegex,
+              exclude: lessModuleRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 2,
+                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  modules: true,
+                },
+                'less-loader'
               ),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
