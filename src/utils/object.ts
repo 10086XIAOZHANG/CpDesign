@@ -1,14 +1,17 @@
-const {
+import {
     dataType
-} = require('./data/data')
-
+}  from './data/data'
+export interface IDeepReplace {
+    obj?:any;
+    cb?:any;
+}
 /**
  * to judge whether variable is Object
  *
  * @param obj
  * @return {Boolean} - whether variable is Object .
  */
-const isObject = (obj) => {
+const isObject = (obj:any) => {
     return dataType(obj) === 'object'
 }
 
@@ -18,7 +21,7 @@ const isObject = (obj) => {
  * @param obj
  * @return {Boolean} - whether Object is empty .
  */
-const isEmpty = (obj) => {
+const isEmpty = (obj:any) => {
     return Object.keys(obj).length === 0
 }
 
@@ -28,7 +31,7 @@ const isEmpty = (obj) => {
  * @param obj
  * @return {Array}
  */
-const deepReplaceVal = (opt = {}) => {
+const deepReplaceVal = (opt:IDeepReplace = {}) => {
     var obj = opt.obj
     var cb = opt.cb
     var replacedObj = {}
@@ -55,14 +58,14 @@ const deepReplaceVal = (opt = {}) => {
  * @param obj
  * @return {Array}
  */
-const multiToOne = (objHub) => {
+const multiToOne = (objHub:any) => {
     let transformObj = {}
     let prefix = ''
 
     let valArr = Object.values(objHub)
     let keyArr = Object.keys(objHub)
 
-    function deep(prefix, obj) {
+    function deep(prefix:string, obj:any) {
         let valArr = Object.values(obj)
         let keyArr = Object.keys(obj)
         let objPrefix = ''
@@ -95,7 +98,7 @@ const multiToOne = (objHub) => {
     return transformObj
 }
 
-module.exports = {
+ export {
     isObject,
     deepReplaceVal,
     isEmpty,

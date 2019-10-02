@@ -13,9 +13,9 @@
  * type(/abcd/) // "regex"
  * type(new Date()) // "date"
  */
-const dataType = function (variable) {
-  var str = Object.prototype.toString.call(variable)
-  return str.match(/\[object (.*?)\]/)[1].toLowerCase()
+const dataType = function (variable:any) {
+  const str = Object.prototype.toString.call(variable)
+  return (str as any).match(/\[object (.*?)\]/)[1].toLowerCase()
 }
 
 export {

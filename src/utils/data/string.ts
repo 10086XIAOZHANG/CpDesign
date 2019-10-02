@@ -1,6 +1,4 @@
-const {
-    dataType
-} = require('./data')
+import {dataType} from './data'
 
 /**
  * to judge whether variable is string
@@ -8,7 +6,7 @@ const {
  * @param string
  * @return {Boolean} - whether variable is Obarrayject .
  */
-const isString = (str) => {
+const isString = (str:any) => {
     return dataType(str) === 'string'
 }
 
@@ -19,7 +17,7 @@ const isString = (str) => {
  * @return {String}
  *
  */
-const trimEnter = (str) => {
+const trimEnter = (str:string) => {
     return str.replace(/(^\n*)|(\n*$)/g, '')
 }
 
@@ -29,7 +27,7 @@ const trimEnter = (str) => {
  * @param {string} str
  * @param {number} length - 需要保留字符串的长度
  */
-const omit = (str, length) => {
+const omit = (str:string, length:number) => {
     return str.substr(0, length) + '...'
 }
 
@@ -40,7 +38,7 @@ const omit = (str, length) => {
  * @param {number} from 开始屏蔽的起始位置
  * @param {number} to 不写则默认为字符串末尾的位置
  */
-const shield = (str, from, to) => {
+const shield = (str:string, from:number, to:number) => {
     if (!str) {
         return false
     }

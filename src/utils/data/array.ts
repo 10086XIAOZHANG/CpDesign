@@ -4,7 +4,7 @@
  * @param array
  * @return {Boolean} - whether array is empty.
  */
-const isEmpty = (arr) => {
+const isEmpty = (arr:Array<any>) => {
   return arr.length === 0
 }
 
@@ -14,7 +14,7 @@ const isEmpty = (arr) => {
  * @param array
  * @return { Array } - whether array is empty.
  */
-const unique = (arr) => {
+const unique = (arr:Array<any>) => {
   return Array.from(new Set(arr))
 }
 
